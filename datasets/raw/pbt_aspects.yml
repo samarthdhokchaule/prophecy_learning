@@ -1,0 +1,102 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: patient_id
+    type: string
+    nullable: true
+    metadata:
+      description: Unique identifier assigned to each patient record.
+      mappings: []
+      tags: []
+  - name: sex
+    type: string
+    nullable: true
+    metadata:
+      description: Gender of the patient, represented as a single character.
+      mappings: []
+      tags: []
+  - name: age
+    type: string
+    nullable: true
+    metadata:
+      description: Age group or category associated with the patient.
+      mappings: []
+      tags: []
+  - name: country
+    type: string
+    nullable: true
+    metadata:
+      description: Country where the patient is located.
+      mappings: []
+      tags: []
+  - name: province
+    type: string
+    nullable: true
+    metadata:
+      description: Province or region associated with the patient's record.
+      mappings: []
+      tags: []
+  - name: city
+    type: string
+    nullable: true
+    metadata:
+      description: Name of the city associated with the record.
+      mappings: []
+      tags: []
+  - name: infection_case
+    type: string
+    nullable: true
+    metadata:
+      description: Type or category of the infection case or metric being reported.
+      mappings: []
+      tags: []
+  - name: infected_by
+    type: string
+    nullable: true
+    metadata:
+      description: Identifier or source linked to the origin of infection or metric.
+      mappings: []
+      tags: []
+  - name: contact_number
+    type: string
+    nullable: true
+    metadata:
+      description: Reference number or code for the record, not a phone number.
+      mappings: []
+      tags: []
+  - name: symptom_onset_date
+    type: string
+    nullable: true
+    metadata:
+      description: Date when symptoms first appeared, if applicable.
+      mappings: []
+      tags: []
+  - name: confirmed_date
+    type: string
+    nullable: true
+    metadata:
+      description: Date when the case was officially confirmed.
+      mappings: []
+      tags: []
+  - name: released_date
+    type: string
+    nullable: true
+    metadata:
+      description: Date when the individual was declared recovered or released.
+      mappings: []
+      tags: []
+  - name: deceased_date
+    type: string
+    nullable: true
+    metadata:
+      description: Date when the individual passed away due to the illness.
+      mappings: []
+      tags: []
+  - name: state
+    type: string
+    nullable: true
+    metadata:
+      description: State or region where the case was reported.
+      mappings: []
+      tags: []

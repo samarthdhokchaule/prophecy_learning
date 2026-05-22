@@ -1,0 +1,474 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1",
+      "unitTestNullDataMigrated" : true
+    },
+    "functions" : { },
+    "codeGenConfiguration" : {
+      "editableConfig" : true,
+      "plibVersion" : {
+        "mavenVersion" : "9.3.0",
+        "pyPiVersion" : "2.1.17"
+      },
+      "sparkConfigJinjaEnabled" : true,
+      "workflowMode" : "batch"
+    },
+    "id" : "1",
+    "uri" : "pipelines/pl_sales_enriched",
+    "sourceSuggestions" : [ ],
+    "pipelineSettingsInfo" : {
+      "applicationName" : "pl_sales_enriched",
+      "hasApplication" : true,
+      "isFunctionsPackageDirDefined" : true,
+      "isNullValuesInUnitTestsEnabled" : true,
+      "sparkConfigOptions" : {
+        "disableSparkCreationTimeConfigGeneration" : true
+      }
+    },
+    "language" : "python",
+    "fabricId" : "37370",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "samarthcloudaeonnetteam.plsales.functions",
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions" ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ {
+      "name" : "spark.default.parallelism",
+      "value" : "4"
+    }, {
+      "name" : "spark.sql.legacy.allowUntypedScalaUDF",
+      "value" : "true"
+    } ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "12654",
+      "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12655",
+      "projectName" : "ProphecyWarehousePython",
+      "externalDependencies" : [ ]
+    } ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "pl_sales_enriched",
+    "configTopLevelPackage" : "pl_sales_enriched",
+    "configurationVersion" : "v2"
+  },
+  "connections" : [ {
+    "id" : "MbTyK_A3zSa_3TF8_ayYA$$6oQlAf6UfSb9QXbzrVDOq",
+    "source" : "vkLR2AhLe5ZeuQeUEV2hr$$SRX9fZURTYonEEM322PY8",
+    "sourcePort" : "05EFAnrTH0I71HrtWpGwa$$MhGcMfSITzy0E0UJULLaZ",
+    "target" : "w8fXR5yc6ig6siqIrH-mH$$PXQ0BVqAizsRjH8JQv7_C",
+    "targetPort" : "zGu5jVysa7XvNeK9Zrj95$$Jj28Md2QxmaEv-37fzdV1"
+  }, {
+    "id" : "0wyW5A9n75GBfkwT4AkKc$$txqH71Q43Tld18GXRyb2-",
+    "source" : "w8fXR5yc6ig6siqIrH-mH$$PXQ0BVqAizsRjH8JQv7_C",
+    "sourcePort" : "LjOEpFYpX03T-T95UYaKg$$qOcHNbEuljbRrmNJf3exe",
+    "target" : "ZgtjXeyVSVcquOLADneis$$5Y_lIFngqglx-OHSawWJZ",
+    "targetPort" : "JTI-NJNPFPvlQl7_pU-Uf$$uiq_2SbrJH2iPt7X3l7Cp"
+  } ],
+  "processes" : {
+    "vkLR2AhLe5ZeuQeUEV2hr$$SRX9fZURTYonEEM322PY8" : {
+      "id" : "vkLR2AhLe5ZeuQeUEV2hr$$SRX9fZURTYonEEM322PY8",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "adls_data",
+        "slug" : "adls_data",
+        "x" : -1540,
+        "y" : -140,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "05EFAnrTH0I71HrtWpGwa$$MhGcMfSITzy0E0UJULLaZ",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/adls_data"
+      }
+    },
+    "w8fXR5yc6ig6siqIrH-mH$$PXQ0BVqAizsRjH8JQv7_C" : {
+      "id" : "w8fXR5yc6ig6siqIrH-mH$$PXQ0BVqAizsRjH8JQv7_C",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "select_industry_fields",
+        "slug" : "select_industry_fields",
+        "x" : -1360,
+        "y" : -120,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Extracts key industry and business metrics for further analysis.",
+        "autoUpdateComment" : true,
+        "dataPreview" : false,
+        "showRecordsCount" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "zGu5jVysa7XvNeK9Zrj95$$Jj28Md2QxmaEv-37fzdV1",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "year",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Year for which the data is reported.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "industry_code_ANZSIC",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Industry classification code as per ANZSIC standard.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "industry_name_ANZSIC",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Name of the industry as defined by ANZSIC.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "rme_size_grp",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Group indicating the size of the business based on rolling mean employees.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "variable",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Type of business metric or attribute being measured.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "value",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The recorded measurement or amount for the specified variable.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "unit",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The unit of measurement for the value, such as COUNT or DOLLARS(millions).",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c7",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "An internal or system-generated field with no business meaning in this dataset.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c8",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "An internal or system-generated field with no business meaning in this dataset.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c9",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "An internal or system-generated field with no business meaning in this dataset.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c10",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "This column is currently empty and does not contain any business data.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c11",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "This column is currently empty and does not contain any business data.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c12",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "This column is currently empty and does not contain any business data.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c13",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "This column is currently empty and does not contain any business data.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c14",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "This column is currently empty and does not contain any business data.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "_c15",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "This field is currently empty and contains no business data.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "LjOEpFYpX03T-T95UYaKg$$qOcHNbEuljbRrmNJf3exe",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "year",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "year"
+          },
+          "description" : ""
+        }, {
+          "target" : "industry_code_ANZSIC",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "industry_code_ANZSIC"
+          },
+          "description" : ""
+        }, {
+          "target" : "industry_name_ANZSIC",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "industry_name_ANZSIC"
+          },
+          "description" : ""
+        }, {
+          "target" : "rme_size_grp",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "rme_size_grp"
+          },
+          "description" : ""
+        }, {
+          "target" : "variable",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "variable"
+          },
+          "description" : ""
+        }, {
+          "target" : "value",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "value"
+          },
+          "description" : ""
+        }, {
+          "target" : "unit",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "unit"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "zGu5jVysa7XvNeK9Zrj95$$Jj28Md2QxmaEv-37fzdV1##variable", "zGu5jVysa7XvNeK9Zrj95$$Jj28Md2QxmaEv-37fzdV1##industry_name_ANZSIC", "zGu5jVysa7XvNeK9Zrj95$$Jj28Md2QxmaEv-37fzdV1##rme_size_grp", "zGu5jVysa7XvNeK9Zrj95$$Jj28Md2QxmaEv-37fzdV1##unit", "zGu5jVysa7XvNeK9Zrj95$$Jj28Md2QxmaEv-37fzdV1##year", "zGu5jVysa7XvNeK9Zrj95$$Jj28Md2QxmaEv-37fzdV1##industry_code_ANZSIC", "zGu5jVysa7XvNeK9Zrj95$$Jj28Md2QxmaEv-37fzdV1##value" ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.55&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "ZgtjXeyVSVcquOLADneis$$5Y_lIFngqglx-OHSawWJZ" : {
+      "id" : "ZgtjXeyVSVcquOLADneis$$5Y_lIFngqglx-OHSawWJZ",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "dest_tbl",
+        "slug" : "dest_tbl",
+        "x" : -1160,
+        "y" : -140,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "JTI-NJNPFPvlQl7_pU-Uf$$uiq_2SbrJH2iPt7X3l7Cp",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "year",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Year for which the data is reported.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "industry_code_ANZSIC",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Industry classification code as per ANZSIC standard.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "industry_name_ANZSIC",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Name of the industry as defined by ANZSIC.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "rme_size_grp",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Group indicating the size of the business based on rolling mean employees.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "variable",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Type of business metric or attribute being measured.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "value",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The recorded measurement or amount for the specified variable.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "unit",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The unit of measurement for the value, such as COUNT or DOLLARS(millions).",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/dest_tbl"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  }
+}

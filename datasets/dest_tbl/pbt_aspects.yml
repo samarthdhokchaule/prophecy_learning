@@ -1,0 +1,54 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: year
+    type: string
+    nullable: true
+    metadata:
+      description: Year for which the data is reported.
+      mappings: []
+      tags: []
+  - name: industry_code_ANZSIC
+    type: string
+    nullable: true
+    metadata:
+      description: Industry classification code as per ANZSIC standard.
+      mappings: []
+      tags: []
+  - name: industry_name_ANZSIC
+    type: string
+    nullable: true
+    metadata:
+      description: Name of the industry as defined by ANZSIC.
+      mappings: []
+      tags: []
+  - name: rme_size_grp
+    type: string
+    nullable: true
+    metadata:
+      description: Group indicating the size of the business based on rolling mean
+        employees.
+      mappings: []
+      tags: []
+  - name: variable
+    type: string
+    nullable: true
+    metadata:
+      description: Type of business metric or attribute being measured.
+      mappings: []
+      tags: []
+  - name: value
+    type: string
+    nullable: true
+    metadata:
+      description: The recorded measurement or amount for the specified variable.
+      mappings: []
+      tags: []
+  - name: unit
+    type: string
+    nullable: true
+    metadata:
+      description: The unit of measurement for the value, such as COUNT or DOLLARS(millions).
+      mappings: []
+      tags: []
