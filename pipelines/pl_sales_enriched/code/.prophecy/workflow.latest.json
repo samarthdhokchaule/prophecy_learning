@@ -361,7 +361,7 @@
         } ],
         "importString" : "",
         "activeTab" : "expressions",
-        "columnsSelector" : [ "zGu5jVysa7XvNeK9Zrj95$$Jj28Md2QxmaEv-37fzdV1##variable", "zGu5jVysa7XvNeK9Zrj95$$Jj28Md2QxmaEv-37fzdV1##industry_name_ANZSIC", "zGu5jVysa7XvNeK9Zrj95$$Jj28Md2QxmaEv-37fzdV1##rme_size_grp", "zGu5jVysa7XvNeK9Zrj95$$Jj28Md2QxmaEv-37fzdV1##unit", "zGu5jVysa7XvNeK9Zrj95$$Jj28Md2QxmaEv-37fzdV1##year", "zGu5jVysa7XvNeK9Zrj95$$Jj28Md2QxmaEv-37fzdV1##industry_code_ANZSIC", "zGu5jVysa7XvNeK9Zrj95$$Jj28Md2QxmaEv-37fzdV1##value" ]
+        "columnsSelector" : [ "zGu5jVysa7XvNeK9Zrj95$$Jj28Md2QxmaEv-37fzdV1##industry_name_ANZSIC", "zGu5jVysa7XvNeK9Zrj95$$Jj28Md2QxmaEv-37fzdV1##rme_size_grp", "zGu5jVysa7XvNeK9Zrj95$$Jj28Md2QxmaEv-37fzdV1##value", "zGu5jVysa7XvNeK9Zrj95$$Jj28Md2QxmaEv-37fzdV1##year", "zGu5jVysa7XvNeK9Zrj95$$Jj28Md2QxmaEv-37fzdV1##unit", "zGu5jVysa7XvNeK9Zrj95$$Jj28Md2QxmaEv-37fzdV1##variable", "zGu5jVysa7XvNeK9Zrj95$$Jj28Md2QxmaEv-37fzdV1##industry_code_ANZSIC" ]
       },
       "componentInfo" : {
         "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.55&projectSubscriptionProjectId=12654&path=gems/Reformat",
